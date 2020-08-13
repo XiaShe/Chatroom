@@ -20,13 +20,19 @@ func ShowMenu() {
 	fmt.Println("请选择（1-4）")
 
 	var key int
+	var content string // 输入消息
+	// 定义实例，方便再switch内部调用
+	smsProcess := &SmProcess{}
+
 	fmt.Scanf("%d\n", &key)
 	switch key {
 	case 1:
 		// fmt.Println("显示在线用户列表")
 		outputOnlineUser()
 	case 2:
-		fmt.Println("发送消息")
+		fmt.Println("请输入群发消息：")
+		fmt.Scanf("%s\n", &content)
+		smsProcess.SendGroupMes(content) // 群发消息
 	case 3:
 		fmt.Println("查看信息列表")
 	case 4:

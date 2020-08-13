@@ -1,12 +1,16 @@
 package process
 
 import (
+	"chatRoomProject/client/model"
 	"chatRoomProject/common/message"
 	"fmt"
 )
 
 // 客户端需维护的map，即当前在线人数
 var onlineUsers  = make(map[int]*message.User, 10)
+
+// 在用户登录成功后完成对CurUser初始化
+var CurUser model.CerUser
 
 // 在客户端显示当前在线的客户
 func outputOnlineUser() {
