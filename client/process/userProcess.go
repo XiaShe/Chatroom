@@ -75,7 +75,7 @@ func (this *UserProcess) Login(userId int, userPwd string) (err error) {
 	err = json.Unmarshal([]byte(mes.Data), &loginResMes)
 
 	if loginResMes.Code == 200 {
-		// 初始化CurUser
+		// 初始化CurUser，登录后发送消息时使用
 		CurUser.Conn = conn
 		CurUser. UserId = userId
 		CurUser.UserStatus = message.UserOnline
