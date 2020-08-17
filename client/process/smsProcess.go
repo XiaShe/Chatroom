@@ -1,18 +1,18 @@
 package process
 
 import (
-	"chatRoomProject/client/utils"
-	"chatRoomProject/common/message"
-	"encoding/json"
-	"fmt"
+"chatRoomProject/client/utils"
+"chatRoomProject/common/message"
+"encoding/json"
+"fmt"
 )
 
-type SmProcess struct {
+type SmsProcess struct {
 
 }
 
 // 发送群聊消息
-func (this *SmProcess) SendGroupMes(content string) (err error) {
+func (this *SmsProcess) SendGroupMes(content string) (err error) {
 	// 创建一个mes
 	var mes message.Message
 	mes.Type = message.SmsMesType

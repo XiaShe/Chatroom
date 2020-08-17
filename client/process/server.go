@@ -22,7 +22,7 @@ func ShowMenu() {
 	var key int
 	var content string // 输入消息
 	// 定义实例，方便再switch内部调用
-	smsProcess := &SmProcess{}
+	smsProcess := &SmsProcess{}
 
 	fmt.Scanf("%d\n", &key)
 	switch key {
